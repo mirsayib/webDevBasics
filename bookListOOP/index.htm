@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">   
+    <script src="https://use.fontawesome.com/3d138018bb.js"></script>
+    <style>
+        .container {
+            margin: auto;
+	        width: 50%;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        tbody {
+            font-weight: 400;
+            font-size: larger;
+        }
+
+        #submit {
+            border-radius: 0 0 10px 10px;
+        }
+
+        nav {
+            border-radius: 15px 15px 0 0;
+            margin-top: 5px;
+        }
+
+        input[type=text] {
+            border-width: 1px;
+            border-radius: 0;
+            
+        }
+
+        table {
+            border-collapse: collapse;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        .hr-text {
+        font-size: 20px;
+        position: relative;
+        border: 0;
+        height: 1.5em
+        }
+
+        input:focus, select:focus, textarea:focus, button:focus {
+            outline: none;
+        }
+        label {
+            margin-left: 5px;
+        }
+
+        
+    </style>
+    
+
+
+</head>
+<body style="font-family: Century Gothic;">
+    <div class="container">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa fa-book fa-lg"></i> BookReads</a>
+            </div>
+        </nav>
+        
+        <form id="book-form" style="font-weight: 600; border-radius: 0 0 15px 15px; border: solid black 2px;">
+            <div class="mb-1">
+                <label for="title" class="form-label">Title</label>
+                <input class="form-control" type="text" id="title">
+            </div>
+
+            <div class="mb-1">
+                <label for="author" class="form-label">Author</label>
+                <input class="form-control" type="text" id="author">
+            </div>
+
+            <div>
+                <label for="isbn" class="form-label">ISBN</label>
+                <input class="form-control" type="text" id="isbn">
+            </div>
+            <div class="d-grid">
+                <input  id = "submit" type="submit"  class="btn btn-outline-dark" value="Submit">
+            </div>
+        </form>
+        <hr>
+        <div class="table-responsive">
+            <table  class="table table-hover">
+                <thead style="border-radius: 15px;" class="table-dark">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>ISBN</th>
+                        <th></th>
+                    </tr>
+                    
+                </thead>
+                <tbody id="book-list">
+                    
+                </tbody>
+            </table> 
+        </div>           
+   
+    </div>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+</body>
+</html>
